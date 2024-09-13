@@ -11,15 +11,43 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
+            width: 50%;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 0.5%;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: flex;
+
+            margin-bottom: 20px;
+        }
+
+        .hu {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .en {
+            display: block;
+            justify-content: center;
+            align-items: center;
         }
 
         h1,
@@ -61,84 +89,201 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
         }
+
+        /* Új stílus a láthatóság beállításához */
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Pandur Ádám</h1>
-        <img src="panduradam.jpg" alt="Pandur Ádám" class="profile-pic">
-        <p><strong>Születési dátum:</strong> 1990.10.20.</p>
-        <p><strong>Lakhely:</strong> Veszprém</p>
-        <p><strong>Családi állapot:</strong> Házas, két gyermek</p>
-
-        <div class="section">
-            <h2>Bemutatkozás</h2>
-            <p>Pandur Ádám vagyok, 33 éves, Veszprémben élek családommal. Az elmúlt évek során több területen is
-                tapasztalatot szereztem, így dolgoztam a logisztikában, geodéziai területen, és a kereskedelemben is,
-                ahol operatív munkatársi és területi képviselői feladatokat láttam el. Az utóbbi időben azonban
-                pályamódosításon dolgoztam, és sikeresen elvégeztem egy Junior Frontend Developer képzést a Ruander
-                Oktatóközpontban. Jelenleg ezen a területen keresek munkát, ahol kamatoztathatom a megszerzett tudásomat
-                és tapasztalataimat, miközben tovább fejlődöm a szakmában. Hiszem, hogy a sokoldalú szakmai hátterem és
-                az újonnan megszerzett képességeim ideális kombinációt jelentenek egy dinamikusan fejlődő csapat
-                számára.</p>
+    <div class="content">
+        <div class="button">
+            <button onclick="toggleVisibility('hu')">HU</button>
+            <button onclick="toggleVisibility('en')">EN</button>
         </div>
 
-        <div class="section">
-            <h2>Elérhetőségek</h2>
-            <ul>
-                <li><strong>Telefonszám:</strong> +36 70 303 8919</li>
-                <li><strong>E-mail:</strong> pandurster@gmail.com</li>
-            </ul>
+
+
+        <div class="hu container ">
+            <h1>Pandur Ádám</h1>
+            <img src="panduradam.jpg" alt="Pandur Ádám" class="profile-pic">
+            <p><strong>Születési dátum:</strong> 1990.10.20.</p>
+            <p><strong>Lakhely:</strong> Veszprém</p>
+            <p><strong>Családi állapot:</strong> Házas, két gyermek</p>
+
+            <div class="section">
+                <h2>Bemutatkozás</h2>
+                <p>Pandur Ádám vagyok, 33 éves, Veszprémben élek családommal. Az elmúlt évek során több területen
+                    szereztem
+                    tapasztalatot, így dolgoztam geodéziai területen, logisztikában és a kereskedelemben
+                    is,
+                    ahol operatív munkatársi és területi képviselői feladatokat láttam el. Az utóbbi időben azonban
+                    pályamódosításon dolgoztam, és sikeresen elvégeztem egy Junior Frontend Developer képzést a Ruander
+                    Oktatóközpontban. Jelenleg ezen a területen keresek munkát, ahol kamatoztathatom a megszerzett
+                    tudásomat
+                    és tapasztalataimat, miközben tovább fejlődöm a szakmában. Hiszem, hogy a sokoldalú szakmai hátterem
+                    és
+                    az újonnan megszerzett képességeim ideális kombinációt jelentenek egy dinamikusan fejlődő csapat
+                    számára.</p>
+            </div>
+
+            <div class="section">
+                <h2>Elérhetőségek</h2>
+                <ul>
+                    <li><strong>Telefonszám:</strong> +36 70 303 8919</li>
+                    <li><strong>E-mail:</strong> pandurster@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Tanulmányok</h2>
+                <ul>
+                    <li><strong>Ruander Oktatóközpont</strong> – Junior Frontend Developer képzés (2024)</li>
+                    <li><strong>Eötvös Loránd Tudományegyetem (ELTE)</strong> – Térképész szak (2010-2013, diploma
+                        nélkül)
+                    </li>
+                    <li><strong>Lóczy Lajos Gimnázium, Balatonfüred</strong> – Középiskolai érettségi (2005-2010)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Szakmai tapasztalat</h2>
+                <ul>
+                    <li><strong>AWD Interior Spółka Jawna</strong> – Területi képviselő (2022-2024)</li>
+                    <li><strong>Bakonytruck Kft.</strong> – Operatív munkatárs, Területi képviselő, Belföldi tgk. sofőr
+                        (2015-2022)</li>
+                    <li><strong>Happ Kft.</strong> – Nemzetközi tgk. sofőr (2015)</li>
+                    <li><strong>Geodézia Zrt.</strong> – Geodéta segéd (2014)</li>
+                    <li><strong>Magyar Posta Zrt.</strong> – Kézbesítő (2013)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Készségek</h2>
+                <ul>
+                    <li>Frontend fejlesztés (HTML, CSS, JavaScript, Angular, MongoDB)</li>
+                    <li>Ügyfélkapcsolat-kezelés és értékesítés</li>
+                    <li>Problémamegoldás és csapatmunka</li>
+                    <li>Logisztikai és operatív feladatok ellátása</li>
+                    <li>Üzleti kommunikáció</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Nyelvismeret</h2>
+                <ul>
+                    <li><strong>Angol:</strong> Középfokú szint (B2)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Célkitűzés</h2>
+                <p>Célom, hogy a frontend fejlesztés területén kamatoztassam a megszerzett tudásomat, és olyan dinamikus
+                    csapat tagja legyek, ahol lehetőségem van folyamatos szakmai fejlődésre és új technológiák
+                    megismerésére.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Tanulmányok</h2>
-            <ul>
-                <li><strong>Ruander Oktatóközpont</strong> – Junior Frontend Developer képzés (2024)</li>
-                <li><strong>Eötvös Loránd Tudományegyetem (ELTE)</strong> – Térképész szak (2010-2013, diploma nélkül)
-                </li>
-                <li><strong>Lóczy Lajos Gimnázium, Balatonfüred</strong> – Középiskolai érettségi (2005-2010)</li>
-            </ul>
-        </div>
 
-        <div class="section">
-            <h2>Szakmai tapasztalat</h2>
-            <ul>
-                <li><strong>AWD Interior Spółka Jawna</strong> – Területi képviselő (2022-2024)</li>
-                <li><strong>Bakonytruck Kft.</strong> – Operatív munkatárs, Területi képviselő, Belföldi tgk. sofőr
-                    (2015-2022)</li>
-                <li><strong>Happ Kft.</strong> – Nemzetközi tgk. sofőr (2015)</li>
-                <li><strong>Geodézia Zrt.</strong> – Geodéta segéd (2014)</li>
-                <li><strong>Magyar Posta Zrt.</strong> – Kézbesítő (2013)</li>
-            </ul>
-        </div>
 
-        <div class="section">
-            <h2>Készségek</h2>
-            <ul>
-                <li>Frontend fejlesztés (HTML, CSS, JavaScript, Angular, MongoDB)</li>
-                <li>Ügyfélkapcsolat-kezelés és értékesítés</li>
-                <li>Problémamegoldás és csapatmunka</li>
-                <li>Logisztikai és operatív feladatok ellátása</li>
-                <li>Üzleti kommunikáció</li>
-            </ul>
-        </div>
+        <div class="container en hidden">
+            <h1>Adam Pandur</h1>
+            <img src="panduradam.jpg" alt="Pandur Ádám" class="profile-pic">
+            <p><strong>Date of birth:</strong> 1990.10.20.</p>
+            <p><strong>Residence:</strong> Veszprém</p>
+            <p><strong>Marital Status:</strong> Married, two children</p>
 
-        <div class="section">
-            <h2>Nyelvismeret</h2>
-            <ul>
-                <li><strong>Angol:</strong> Középfokú szint (B2)</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>Introduction</h2>
+                <p>My name is Ádám Pandur, I am 33 years old, and I live in Veszprém with my family. Over the past
+                    years, I
+                    have gained experience in various fields, including logistics, geodetic services, and commerce,
+                    where I
+                    worked as an operations assistant and a regional sales representative. Recently, I have been
+                    focusing on
+                    a
+                    career change, and I successfully completed a Junior Frontend Developer course at Ruander Education
+                    Center. I am currently seeking a job in this field where I can utilize my newly acquired knowledge
+                    and
+                    experience while continuing to develop professionally. I believe my diverse professional background
+                    and
+                    newly acquired skills make me an ideal fit for a dynamically growing team.</p>
+            </div>
 
-        <div class="section">
-            <h2>Célkitűzés</h2>
-            <p>Célom, hogy a frontend fejlesztés területén kamatoztassam a megszerzett tudásomat, és olyan dinamikus
-                csapat tagja legyek, ahol lehetőségem van folyamatos szakmai fejlődésre és új technológiák
-                megismerésére.</p>
+            <div class="section">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><strong>Phone:</strong> +36 70 303 8919</li>
+                    <li><strong>E-mail:</strong> pandurster@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <ul>
+                    <li><strong>Ruander Education Center</strong> – Junior Frontend Developer Course (2024)</li>
+                    <li><strong>Eötvös Loránd Tudományegyetem (ELTE)</strong> – Cartography (2010-2013, without diploma)
+                    </li>
+                    <li><strong>Lóczy Lajos High School, Balatonfüred</strong> – High School Diploma (2005-2010)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+                <ul>
+                    <li><strong>AWD Interior Spółka Jawna</strong> – Sales Representative (2022-2024)</li>
+                    <li><strong>Bakonytruck Kft.</strong> – Operative associate, Sales Representative (2015-2022)</li>
+                    <li><strong>Happ Kft.</strong> – International Truck Driver (2015)</li>
+                    <li><strong>Geodézia Zrt.</strong> – Surveyor Assistant (2014)</li>
+                    <li><strong>Hungarian Post Office Zrt.</strong> – Mail Carrier (2013)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Frontend Development (HTML, CSS, JavaScript, Angular, MongoDB)</li>
+                    <li>Client Relationship Management</li>
+                    <li>Sales</li>
+                    <li>Problem Solving</li>
+                    <li>Teamwork</li>
+                    <li>Logistics and Operations Management</li>
+                    <li>Business Communication</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Language Skills</h2>
+                <ul>
+                    <li><strong>English:</strong> Intermediate Level (B2)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Career Objective</h2>
+                <p>My goal is to apply my knowledge and experience on the IT field and become a part of a dynamic team
+                    where
+                    I can continuously develop professionally and learn new technologies.</p>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleVisibility(lang) {
+            const huDiv = document.querySelector('.hu');
+            const enDiv = document.querySelector('.en');
+
+            if (lang === 'hu') {
+                huDiv.classList.remove('hidden');
+                enDiv.classList.add('hidden');
+            } else if (lang === 'en') {
+                huDiv.classList.add('hidden');
+                enDiv.classList.remove('hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
